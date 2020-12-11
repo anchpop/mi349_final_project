@@ -15,7 +15,7 @@ import {
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Test from "../components/image"
+import LocalImage from "../components/image"
 import { string } from "prop-types"
 
 import artistData from "../../content/artists.yaml"
@@ -37,7 +37,7 @@ const Artist = ({ artist }: { artist: ArtistInfo }) => {
   return (
     <Box maxW="lg" borderWidth="1px" borderRadius="lg" overflow="hidden">
       <a href={"https://instagram.com/" + artist.instagramHandle}>
-        <Image src={artist.imageUrl} alt={artist.imageAlt} />
+        <LocalImage filename={artist.imageUrl} alt={artist.imageAlt} />
       </a>
 
       <Box p="6">
