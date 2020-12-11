@@ -118,8 +118,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Heading as="h3" size="lg" paddingBottom={1}>
-        Inkredible artists below 👇
+      <Heading as="h4" size="md" paddingBottom={5}>
+        Give location access to sort by distance
       </Heading>
       <div id="artistsGrid">
         {artistsSorted.map((artist, index) => (
