@@ -1,0 +1,61 @@
+artists:
+  - imageUrl: "/TattooArtists/vince_tatwo.jpg"
+    imageAlt: "Sketch-style tattoo of a wolf with flowers"
+    location: Montpellier, France
+    latitude: 43.616684276337224
+    longitude: 4.009537714895395
+    title: "Vince_tatwo"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "vince_tatwo"
+    new: false
+  - imageUrl: "/TattooArtists/curtmontgomerytattoos.jpg"
+    imageAlt: "Stick-and-poke tattoo of two women, one holding a snake and one holding a flower"
+    location: Toronto, Canada
+    latitude: 43.65525187912339
+    longitude: -79.41659715891599
+    title: "Curt Montgomery"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "curtmontgomerytattoos"
+    new: false
+  - imageUrl: "/TattooArtists/winterstone.jpg"
+    imageAlt: "Tattoo of a stylized letter 'z'"
+    location: New York City, New York
+    latitude: 40.71915017401775
+    longitude: -74.00031581662876
+    title: "Winterstone"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "winterstone"
+    new: true
+  - imageUrl: "/TattooArtists/bluestonebabe.jpg"
+    imageAlt: "Wrist tattoo of a snake"
+    location: Brooklyn, NY
+    latitude: 40.672316721733495
+    longitude: -73.94109854609171
+    title: "Rosa Perr"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "bluestonebabe"
+    new: false
+  - imageUrl: "/TattooArtists/miryamlumpini.jpg"
+    imageAlt: "Colorful tattoo of two women in anime style"
+    location: Los Angeles, California
+    latitude: 34.05191933821357
+    longitude: -118.24348129524536
+    title: "Miryam Lumpini"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "miryamlumpini"
+    new: false
+  - imageUrl: "/TattooArtists/fuziuvtpk.jpg"
+    imageAlt: "Elaborate tattoo sleeve of densely-packed cartoon character lineart"
+    location: Los Angeles, California
+    latitude: 34.05191933821357
+    longitude: -118.24348129524536
+    title: "Fuzi"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "fuziuvtpk"
+    new: true

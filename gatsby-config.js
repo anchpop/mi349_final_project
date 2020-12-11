@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Proximity Tat`,
+    description: `The best tattoo artists near you.`,
+    author: `@chadnauseam`,
   },
   plugins: [
+    "@chakra-ui/gatsby-plugin",
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
