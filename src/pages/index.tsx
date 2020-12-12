@@ -97,8 +97,8 @@ const Artist = ({ artist }: { artist: ArtistInfo }) => {
 
 const IndexPage = () => {
   const [currentLocation, setCurrentLocation] = useState({
-    latitude: 0,
-    longitude: 0,
+    latitude: 42.7339828,
+    longitude: -84.4748425,
   })
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
