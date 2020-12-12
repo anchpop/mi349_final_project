@@ -32,7 +32,7 @@ const Image = (props) => {
               name
               childImageSharp {
                 sizes(maxWidth: 600) {
-                  ...GatsbyImageSharpSizes
+                  ...GatsbyImageSharpSizes_tracedSVG
                 }
               }
             }

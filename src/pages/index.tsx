@@ -119,7 +119,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Heading as="h4" size="md" paddingBottom={5}>
-        Give location access to sort by distance
+        Give location access to sort by distance!
       </Heading>
       <div id="artistsGrid">
         {artistsSorted.map((artist, index) => (
