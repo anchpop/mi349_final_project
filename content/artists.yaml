@@ -21,7 +21,7 @@ artists:
     new: false
   - imageUrl: "TattooArtists/winterstone.jpg"
     imageAlt: "Tattoo of a stylized letter 'z'"
-    location: New York City, New York
+    location: New York, New York
     latitude: 40.71915017401775
     longitude: -74.00031581662876
     title: "Winterstone"
@@ -58,4 +58,44 @@ artists:
     formattedPrice: 400
     rating: 4
     instagramHandle: "fuziuvtpk"
+    new: true
+  - imageUrl: "TattooArtists/ghinkos.jpg"
+    imageAlt: "Chest tattoo depicting Marcus Aurelius's face in front of a snake"
+    location: New York, New York
+    latitude: 40.719245156813415
+    longitude: -73.99377037829488
+    title: "Ghinko"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "ghinkos"
+    new: false
+  - imageUrl: "TattooArtists/ponywave.jpg"
+    imageAlt: "Extremely realistic eye tattoo on a woman's back"
+    location: Los Angeles, California
+    latitude: 34.05191933821357
+    longitude: -118.24348129524536
+    title: "Pony Wave"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "ponywave"
+    new: true
+  - imageUrl: "TattooArtists/zaya.jpg"
+    imageAlt: "Cicular beach tattoo"
+    location: Brighton, UK
+    latitude: 50.822499667491485
+    longitude: -0.13717033887875768
+    title: "Z A Y A"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "zaya"
+    new: true
+  - imageUrl: "TattooArtists/franki_tattoo.jpg"
+    imageAlt: "Large, dark tattoo of a fox with its teeth bared"
+    location: Barcelona, Spain
+    latitude: 41.38494408822243
+    longitude: 2.1739395831714017
+    title: "Franki Tattoo"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "franki_tattoo"
     new: true
