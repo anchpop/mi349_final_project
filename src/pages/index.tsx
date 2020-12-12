@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useReducer } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { sortBy } from "lodash"
+import { sortBy, isEqual } from "lodash"
 import haversine from "haversine-distance"
 
 import {
@@ -11,6 +11,9 @@ import {
   Heading,
   SimpleGrid,
   GridItem,
+  Switch,
+  FormControl,
+  FormLabel,
 } from "@chakra-ui/react"
 
 import Layout from "../components/layout"
@@ -87,21 +90,31 @@ const Artist = ({ artist }: { artist: ArtistInfo }) => {
   )
 }
 
+const defaultLocation = {
+  latitude: 42.733982,
+  longitude: -84.474842,
+} // where I live lol
+
 const IndexPage = () => {
-  const [currentLocation, setCurrentLocation] = useState({
-    latitude: 42.7339828,
-    longitude: -84.4748425,
-  })
+  const [locationEnabled, toggleLocationEnabled] = useReducer(
+    locationEnabled => !locationEnabled,
+    false
+  )
+  const [currentLocation, setCurrentLocation] = useState(defaultLocation)
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setCurrentLocation({
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude,
+    if (locationEnabled) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        setCurrentLocation({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        })
+        console.log("Latitude is :", position.coords.latitude)
+        console.log("Longitude is :", position.coords.longitude)
       })
-      console.log("Latitude is :", position.coords.latitude)
-      console.log("Longitude is :", position.coords.longitude)
-    })
-  }, [])
+    } else {
+      setCurrentLocation(defaultLocation)
+    }
+  }, [locationEnabled])
 
   const artistsSorted = sortBy(artistData.artists, ({ latitude, longitude }) =>
     haversine(currentLocation, { latitude, longitude })
@@ -111,7 +124,17 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Heading as="h4" size="md" paddingBottom={3}>
-        Give location access to see who's closest!
+        <Box as="span" paddingRight={2}>
+          See who's closest?
+        </Box>
+        <Box as="span" paddingRight={2}>
+          <Switch
+            id="proximity_scan"
+            isChecked={locationEnabled}
+            onChange={() => toggleLocationEnabled()}
+          />
+        </Box>
+        {!isEqual(currentLocation, defaultLocation) ? "Sorted!" : ""}
       </Heading>
       <Heading as="h6" size="sm" paddingBottom={5}>
         (Click on an artist to see their instagram)
