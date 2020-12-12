@@ -116,6 +116,12 @@ const IndexPage = () => {
     }
   }, [locationEnabled])
 
+  const artistsSortedDefault = sortBy(
+    artistData.artists,
+    ({ latitude, longitude }) =>
+      haversine(defaultLocation, { latitude, longitude })
+  )
+
   const artistsSorted = sortBy(artistData.artists, ({ latitude, longitude }) =>
     haversine(currentLocation, { latitude, longitude })
   )
@@ -134,7 +140,12 @@ const IndexPage = () => {
             onChange={() => toggleLocationEnabled()}
           />
         </Box>
-        {!isEqual(currentLocation, defaultLocation) ? "Sorted!" : ""}
+        {!isEqual(currentLocation, defaultLocation)
+          ? "Sorted!" /* +
+            (isEqual(artistsSorted, artistsSortedDefault)
+              ? " But nothing changed :3"
+              : "") */
+          : ""}
       </Heading>
       <Heading as="h6" size="sm" paddingBottom={5}>
         (Click on an artist to see their Instagram)
