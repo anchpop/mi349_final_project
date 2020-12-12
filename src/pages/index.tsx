@@ -82,14 +82,6 @@ const Artist = ({ artist }: { artist: ArtistInfo }) => {
             /hour
           </Box>
         </Box>
-
-        {/*
-        <Box d="flex" mt="2" alignItems="center">
-          <Box as="span" ml="2" color="gray.600" fontSize="sm">
-            some number of reviews
-          </Box>
-        </Box>
-        */}
       </Box>
     </Box>
   )
@@ -119,7 +111,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Heading as="h4" size="md" paddingBottom={3}>
-        Give location access to sort by distance!
+        Give location access to see who's closest!
       </Heading>
       <Heading as="h6" size="sm" paddingBottom={5}>
         (Click on an artist to see their instagram)
