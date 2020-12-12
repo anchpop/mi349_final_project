@@ -56,7 +56,7 @@ const Artist = ({ artist }: { artist: ArtistInfo }) => {
               letterSpacing="wide"
               fontSize="xs"
               textTransform="uppercase"
-              ml="2"
+              ml={artist.new ? "2" : "0"}
             >
               {artist.location}
             </Box>
