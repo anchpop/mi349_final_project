@@ -137,7 +137,7 @@ const IndexPage = () => {
         {!isEqual(currentLocation, defaultLocation) ? "Sorted!" : ""}
       </Heading>
       <Heading as="h6" size="sm" paddingBottom={5}>
-        (Click on an artist to see their instagram)
+        (Click on an artist to see their Instagram)
       </Heading>
       <div id="artistsGrid">
         {artistsSorted.map((artist, index) => (
