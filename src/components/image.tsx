@@ -3,7 +3,7 @@ import { StaticQuery, graphql, useStaticQuery } from "gatsby"
 
 import Img from 'gatsby-image'
 
-const Image = (props) => {
+const Image = ({filename, alt}) => {
   /*const allImages = useStaticQuery(graphql`
         query {
           images: allFile {
@@ -43,17 +43,17 @@ const Image = (props) => {
   
       render={(data) => {
         const image = data.images.edges.find(n => {
-          return n.node.relativePath.includes(props.filename);
+          return n.node.relativePath.includes(filename);
         });
         if (!image) { 
-          console.log("Couldn't find image at " + props.filename, "Options were ", data.images.edges);
+          console.log("Couldn't find image at " + filename, "Options were ", data.images.edges);
           return null; 
         }
         
         const imageFluid = image.node.childImageSharp.fluid;
         return (
           <Img
-            alt={props.alt}
+            alt={alt}
             fluid={imageFluid}
           />
         );

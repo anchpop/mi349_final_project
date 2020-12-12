@@ -99,3 +99,13 @@ artists:
     rating: 4
     instagramHandle: "franki_tattoo"
     new: true
+  - imageUrl: "TattooArtists/amandawachob.jpg"
+    imageAlt: "Tattoo image of a wave on a woman's back"
+    location: New York, New York
+    latitude: 40.71915017401775
+    longitude: -74.00031581662876
+    title: "Amanda Wachob"
+    formattedPrice: 400
+    rating: 4
+    instagramHandle: "amandawachob"
+    new: true
